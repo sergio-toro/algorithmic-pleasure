@@ -18,6 +18,9 @@ composer.phar update
 # Algorithm B:
 ./console.php storo:number-pow 5 3
 
+# Algorithm C:
+./console.php storo:fibonacci 10
+
 ```
 
 ### Run tests
