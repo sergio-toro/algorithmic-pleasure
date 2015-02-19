@@ -23,7 +23,7 @@ class NumberPowTest extends \PHPUnit_Framework_TestCase
     {
         $result = $numberPow->multiply(5, 3);
 
-        $this->assertEquals($result, 5 * 3);
+        $this->assertEquals(5 * 3, $result);
     }
 
     /**
@@ -33,7 +33,7 @@ class NumberPowTest extends \PHPUnit_Framework_TestCase
     {
         $result = $numberPow->multiply(20, 50);
 
-        $this->assertEquals($result, 20 * 50);
+        $this->assertEquals(20 * 50, $result);
     }
 
     /**
@@ -43,7 +43,7 @@ class NumberPowTest extends \PHPUnit_Framework_TestCase
     {
         $result = $numberPow->pow(5, 3);
 
-        $this->assertEquals($result, pow(5, 3));
+        $this->assertEquals(pow(5, 3), $result);
     }
 
     /**
@@ -53,7 +53,7 @@ class NumberPowTest extends \PHPUnit_Framework_TestCase
     {
         $result = $numberPow->pow(8, 4);
 
-        $this->assertEquals($result, pow(8, 4));
+        $this->assertEquals(pow(8, 4), $result);
     }
 
 }

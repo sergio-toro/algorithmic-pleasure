@@ -23,7 +23,7 @@ class SumNaturalsTest extends \PHPUnit_Framework_TestCase
     {
         $result = $sumNaturals->sumIfMultipleBelow(3, 5, 1000);
 
-        $this->assertEquals($result, 233168);
+        $this->assertEquals(233168, $result);
     }
 
     /**
@@ -33,7 +33,7 @@ class SumNaturalsTest extends \PHPUnit_Framework_TestCase
     {
         $result = $sumNaturals->sumIfMultipleBelow(3, 4, 1000);
 
-        $this->assertEquals($result, 249501);
+        $this->assertEquals(249501, $result);
     }
 
 }
