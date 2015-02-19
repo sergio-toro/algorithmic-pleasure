@@ -6,7 +6,7 @@ Sergio Toro Algorithmic pleasure test.
 ### Set up project
 ```bash
 curl -sS https://getcomposer.org/installer | php
-composer.phar update
+composer.phar install
 ```
 
 ### Run algorithms
