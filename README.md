@@ -25,5 +25,5 @@ composer.phar install
 
 ### Run tests
 ```bash
-./vendor/phpunit/phpunit/phpunit -c app/
+./vendor/phpunit/phpunit/phpunit -c phpunit.xml
 ```
