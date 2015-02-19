@@ -11,9 +11,12 @@ composer.phar update
 
 ### Run algorithms
 ```bash
-# Algorith A:
+# Algorithm A:
 ./console.php storo:sum-multiples
 ./console.php storo:sum-multiples-extra
+
+# Algorithm B:
+./console.php storo:number-pow 5 3
 
 ```
 
