@@ -2,9 +2,6 @@
 
 namespace Storo\Math;
 
-use Storo\Math\SumNaturals;
-
-
 class SumNaturals
 {
     /**
