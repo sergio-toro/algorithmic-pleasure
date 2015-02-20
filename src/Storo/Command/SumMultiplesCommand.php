@@ -25,7 +25,7 @@ class SumMultiplesCommand extends Command
     {
         $sumNaturals = new SumNaturals();
 
-        $result = $sumNaturals->sumIfMultipleBelow(3, 5, 1000);
+        $result = $sumNaturals->getSumOfMultiplesOfAOrB(3, 5, 1000);
 
         $output->writeln("<info>Result:</info> {$result}");
     }
