@@ -7,19 +7,28 @@ class Fibonacci
     /**
      * Calculate fibonacci in a recursive way
      * @param  integer $number
+     * @param  array   $list   Computed fibonacci values
      * @return integer
      */
-    public function recursive($number)
+    public function recursive($number, &$list = [])
     {
-        if ($number===0) {
+        if ($number<=0) {
             return 0;
         }
 
-        if ($number===1) {
+        if ($number==1) {
+            $list[$number] = 1;
             return 1;
         }
 
-        return $this->recursive($number-1) + $this->recursive($number-2);
+        // Check if number already computed
+        if (isset($list[$number])) {
+            return $list[$number];
+        }
+        $list[$number] = $this->recursive($number-1, $list) +
+            $this->recursive($number-2, $list)
+        ;
+        return $list[$number];
     }
 
     /**
@@ -27,18 +36,22 @@ class Fibonacci
      * @param  integer $number
      * @return integer
      */
-    public function iterative($number)
+    public function iterative($number, &$list = [])
     {
-        $aux   = 1;
-        $total = 1;
-
-        for ($i=3; $i <= $number; $i++) {
-            $temp = $aux + $total;
-            $aux  = $total;
-
-            $total = $temp;
+        if ($number<=0) {
+            return 0;
         }
 
-        return $total;
+        if ($number==1) {
+            $list[$number] = 1;
+            return 1;
+        }
+
+        $list  = [ 1 => 1, 2=> 1 ];
+        for ($i=3; $i <= $number; $i++) {
+            $list[$i] = $list[$i-1] + $list[$i-2];
+        }
+
+        return $list[$number];
     }
 }
