@@ -33,11 +33,9 @@ class FibonacciCommand extends Command
 
         $fibonacci = new Fibonacci();
 
-        $output->write("<info>Result: </info>");
-        for ($i=1; $i <= $howMany; $i++) {
-            $result = $fibonacci->recursive($i);
-            $output->write($result . ' ');
-        }
-        $output->write("\n");
+        $result = $fibonacci->recursive($howMany, $list);
+        $list = implode(', ', $list);
+
+        $output->writeln("<info>Result:</info> {$list}.");
     }
 }
