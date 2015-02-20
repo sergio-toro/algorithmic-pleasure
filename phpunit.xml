@@ -13,6 +13,10 @@
     syntaxCheck = "false"
     bootstrap = "bootstrap.php" >
 
+    <listeners>
+        <listener class="Storo\TestListener\TestTimesListener"/>
+    </listeners>
+
     <testsuites>
         <testsuite name="Storo algorithmic pleasure tests">
             <directory>src/Storo/Tests</directory>
