@@ -96,4 +96,42 @@ class FibonacciTest extends \PHPUnit_Framework_TestCase
         $this->assertEquals(377, $result);
     }
 
+
+
+    /**
+     * @depends testFibonacciInstance
+     */
+    public function testIterativeGeneratorResult(Fibonacci $fibonacci)
+    {
+        $generator = $fibonacci->iterativeGenerator(5);
+
+        $result = [];
+        foreach ($generator as $value) {
+            $result[] = $value;
+        }
+
+        $this->assertEquals(
+            [ 1, 1, 2, 3, 5 ],
+            $result
+        );
+    }
+
+    /**
+     * @depends testFibonacciInstance
+     */
+    public function testIterativeGeneratorResult2(Fibonacci $fibonacci)
+    {
+        $generator = $fibonacci->iterativeGenerator(10);
+
+        $result = [];
+        foreach ($generator as $value) {
+            $result[] = $value;
+        }
+
+        $this->assertEquals(
+            [ 1, 1, 2, 3, 5, 8, 13, 21, 34, 55 ],
+            $result
+        );
+    }
+
 }

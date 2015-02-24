@@ -5,6 +5,31 @@ namespace Storo\Math;
 class Fibonacci
 {
     /**
+     * Calculate fibonacci in a iterative way
+     * @param  integer $number
+     * @return Generator
+     *
+     */
+    public function iterativeGenerator($number)
+    {
+        if ($number<=0) {
+            yield 0;
+        }
+        else {
+            yield 1;
+
+            $a = 0;
+            $b = 1;
+            for ($i=1; $i < $number; $i++) {
+                $aux = $a + $b;
+                $a   = $b;
+                $b   = $aux;
+                yield $aux;
+            }
+        }
+    }
+
+    /**
      * Calculate fibonacci in a recursive way
      * @param  integer $number
      * @param  array   $list   Computed fibonacci values
